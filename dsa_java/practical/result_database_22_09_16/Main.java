@@ -5,26 +5,23 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-// import java.util.Paths;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-// import dsa_java.practical.result_database_22_09_16.Student;
 
 public class Main {
     public static void main(String[] args) throws IOException, FileNotFoundException {
-        // System.out.println(args);
-        String sep = System.getProperty("file.separator");
-        String databaseFileName = Paths.get(System.getProperty("user.dir"), "dsa_java", "practical",
-                "result_database_22_09_16", "database.fmt").toString();
+        String databaseFileName = Paths.get(System.getProperty("user.dir"), "database.fmt").toString();
         // Read Database file, import into ArrayList
         List<Student> studentList = new ArrayList<Student>();
         try (
                 BufferedReader databaseFile = new BufferedReader(
                         new FileReader(databaseFileName))) {
+
             String databaseLine = databaseFile.readLine();
+
             while (databaseLine != null) {
                 // If the line is a comment, move on
                 if (databaseLine.startsWith("//") || databaseLine.length() == 0) {
@@ -57,11 +54,19 @@ public class Main {
         Collections.sort(studentList);
         Collections.reverse(studentList);
 
+        List<Student> topBandStudent = new ArrayList<Student>();
+
+        // Create list of top band students
         for (Student student : studentList) {
             if (student.getGradePoint() >= 8) {
-                System.out.println(student.toString());
+                topBandStudent.add(student);
             }
         }
-
+        
+        // Print the top band students
+        System.out.println("Roll.  Name [S1, S2, S3, S4, S5] Grade");
+        for (Student student : topBandStudent) {
+            System.out.println(student);
+        }
     }
 }

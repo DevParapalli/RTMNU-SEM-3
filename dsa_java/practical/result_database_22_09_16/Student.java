@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-// package dsa_java.practical.result_database_22_09_16;
-
 public class Student implements Comparable<Student> {
     int studentRollNumber = 0;
     String studentName = "";
@@ -25,7 +23,7 @@ public class Student implements Comparable<Student> {
 
     // @Override
     public String toString() {
-        return "Roll: " + studentRollNumber + " Name: " + studentName + " Marks: " + Arrays.toString(studentMarks) + " Grade: " + studentGrade;
+        return  studentRollNumber + " " + studentName + "  " + Arrays.toString(studentMarks) + " " + studentGrade;
     }
 
     // @Override
