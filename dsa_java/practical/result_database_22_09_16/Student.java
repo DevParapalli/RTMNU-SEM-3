@@ -5,7 +5,7 @@ public class Student implements Comparable<Student> {
     String studentName = "";
     // MAX MARKS : 100 per subject 
     int[] studentMarks = {0, 0, 0, 0, 0};
-    int studentGrade = 0;
+    double studentGrade = 0;
 
     public Student(int roll, String name, int[] marks) {
         studentRollNumber = roll;
@@ -18,7 +18,7 @@ public class Student implements Comparable<Student> {
             total_marks += i;
         }
 
-        studentGrade = total_marks / 50;
+        studentGrade = total_marks / 50.0;
     }
 
     // @Override
@@ -31,13 +31,13 @@ public class Student implements Comparable<Student> {
         return studentRollNumber + ":" + studentName + ":" + studentMarks[0] + ":" + studentMarks[1] + ":" + studentMarks[2] + ":" + studentMarks[3] + ":" + studentMarks[4];
     }
 
-    public int getGradePoint() {
+    public double getGradePoint() {
         return studentGrade;
     }
 
     @Override
     public int compareTo(Student s) {
-        return this.studentGrade - s.getGradePoint();
+        return Double.compare(this.studentGrade, s.getGradePoint());
     }
 }
 

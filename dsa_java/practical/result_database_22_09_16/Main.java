@@ -58,7 +58,7 @@ public class Main {
 
         // Create list of top band students
         for (Student student : studentList) {
-            if (student.getGradePoint() >= 8) {
+            if (student.getGradePoint() >= 8.0) {
                 topBandStudent.add(student);
             }
         }
