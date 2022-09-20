@@ -1,0 +1,70 @@
+html[data-theme="funky"] {
+  --color-1: #fd841f;
+  --color-2: #e14d2a;
+  --color-3: #cd104d;
+  --color-4: #9c2c77;
+  --color-5: #d8d8d8;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-4);
+  margin: 0px;
+}
+
+.page-header {
+  background-color: var(--color-1);
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0rem;
+  text-align: center;
+}
+
+.list-header {
+  padding: 1rem;
+  background-color: var(--color-3);
+  color: var(--color-5);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: var(--color-2);
+}
+
+.unordered-list {
+  background-color: var(--color-3);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--color-5);
+
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: var(--color-2);
+}
+
+.ordered-list {
+  background-color: var(--color-3);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--color-5);
+
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: var(--color-2);
+}
+
+.description-list {
+  background-color: var(--color-3);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--color-5);
+
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: var(--color-2);
+}
