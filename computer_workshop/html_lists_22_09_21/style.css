@@ -1,10 +1,12 @@
-html[data-theme="funky"] {
-  --color-1: #fd841f;
-  --color-2: #e14d2a;
-  --color-3: #cd104d;
-  --color-4: #9c2c77;
-  --color-5: #d8d8d8;
+html {
+  --color-1: mistyrose;
+  --color-2: purple;
+  --color-3: pink;
+  --color-4: mistyrose;
+  --color-5: black;
 }
+
+
 
 .body {
   display: flex;
@@ -16,7 +18,7 @@ html[data-theme="funky"] {
 }
 
 .page-header {
-  background-color: var(--color-1);
+  background-color: mistyrose;
   width: 100%;
   margin: 0;
   padding: 2rem 0rem;
