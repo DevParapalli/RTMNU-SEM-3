@@ -5,7 +5,7 @@
 void parent_main() {
   printf("[Parent] \n");
   unsigned pid = getpid();
-  printf("PID: %u |", pid);
+  printf("PID: %u | ", pid);
   unsigned ppid = getppid();
   printf("PPID: %u \n", ppid);
 }
@@ -13,7 +13,7 @@ void parent_main() {
 void child_main() {
   printf("[Child] \n");
   unsigned pid = getpid();
-  printf("PID: %u |", pid);
+  printf("PID: %u | ", pid);
   unsigned ppid = getppid();
   printf("PPID: %u \n", ppid);
 }
