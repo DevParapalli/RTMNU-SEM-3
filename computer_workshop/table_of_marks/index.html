@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Table - DevParapalli</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="body">
+    <div class="header-wrapper">
+      <h1 class="main-header"></h1>
+      <h2 class="university-name"></h2>
+    </div>
+    <div class="table-wrapper">
+      <table class="table">
+        <tr>
+          <th rowspan="3" class="th-0">SUBJECT</th>
+          <th colspan="4" class="th-0">INTERNAL</th>
+          <th colspan="4" class="th-0">EXTERNAL</th>
+          <th rowspan="2" colspan="4" class="th-0">TOTAL</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="th-1">PRACTICAL</td>
+            <td colspan="2" class="th-1">THEORY</td>
+            <td colspan="2" class="th-1">PRACTICAL</td>
+            <td colspan="2" class="th-1">THEORY</td>
+        </tr>
+        <tr>
+            <td class="th-2">OBT</td>
+            <td class="th-2">MAX</td>
+            <td class="th-2">OBT</td>
+            <td class="th-2">MAX</td>
+            <td class="th-2">OBT</td>
+            <td class="th-2">MAX</td>
+            <td class="th-2">OBT</td>
+            <td class="th-2">MAX</td>
+            <td class="th-2">OBT</td>
+            <td class="th-2">MAX</td>
+        </tr>
+
+      </table>
+    </div>
+    <template id="subject-template">
+      <tr class="subject">
+        <td class="data data-name"></td>
+        <td class="data obt"></td>
+        <td class="data max"></td>
+        <td class="data obt"></td>
+        <td class="data max"></td>
+        <td class="data obt"></td>
+        <td class="data max"></td>
+        <td class="data obt"></td>
+        <td class="data max"></td>
+        <td class="data obt-total"></td>
+        <td class="data max-total"></td>
+      </tr>
+    </template>
+    <template id="final-tr">
+      <tr class="final-tr">
+        <td class="data data-name">Total Marks</td>
+        <td class="data spacer" colspan="8"></td>
+        <td class="data obt-total-total"></td>
+        <td class="data max-total-total"></td>
+      </tr>
+    </template>
+    <script src="script.js"></script>
+  </body>
+
+
+</html>

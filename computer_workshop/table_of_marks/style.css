@@ -1,0 +1,69 @@
+html {
+  --c1: #b1b2ff;
+  --c2: #b1b2ff;
+  --c3: #d2daff;
+  --c4: #eef1ff;
+  --c5: #400d51;
+}
+
+.body {
+  /* background-color: var(--c4); */
+  background: linear-gradient(to right top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+  color: var(--c5);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header {
+    background: linear-gradient(to right, rgb(15, 23, 42), rgb(88, 28, 135), rgb(15, 23, 42));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.table-wrapper {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.table {
+  width: 100%;
+  border: 0.25rem solid var(--c5);
+  border-radius: 0.5rem;
+  padding: 0rem;
+}
+
+th,
+td {
+  border-collapse: collapse;
+  border: 0.125rem solid var(--c2);
+  background-color: var(--c3);
+  padding: 0.5rem;
+  text-align: center;
+  margin: 5rem;
+}
+
+.th-0 {
+  background-color: var(--c1);
+}
+
+.th-1 {
+  background-color: var(--c2);
+}
+
+.th-2 {
+  background-color: var(--c2);
+}
