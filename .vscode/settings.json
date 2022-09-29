@@ -2,10 +2,11 @@
     "java.project.sourcePaths": [
         "dsa_java/practical/strings",
         "dsa_java/practical/result_database_22_09_16",
+        "dsa_java/practical/reading_material",
+        "dsa_java/practical/company_employees/multiple_private",
         "dsa_java/company_employees",
         "dsa_java/circle",
         "assist/rohini_shambharkar",
-        "dsa_java/practical/company_employees/multiple_private",
-        "dsa_java\\practical\\reading_material"
+        "dsa_java/practical/vehicle"
     ]
 }

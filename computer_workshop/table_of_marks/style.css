@@ -8,7 +8,12 @@ html {
 
 .body {
   /* background-color: var(--c4); */
-  background: linear-gradient(to right top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+  background: linear-gradient(
+    to right top,
+    rgb(249, 168, 212),
+    rgb(216, 180, 254),
+    rgb(129, 140, 248)
+  );
   color: var(--c5);
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -28,10 +33,16 @@ html {
 }
 
 .main-header {
-    background: linear-gradient(to right, rgb(15, 23, 42), rgb(88, 28, 135), rgb(15, 23, 42));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+  /* background: linear-gradient(
+    to right,
+    rgb(15, 23, 42),
+    rgb(88, 28, 135),
+    rgb(15, 23, 42)
+  ); */
+  background: linear-gradient(to top right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .table-wrapper {
