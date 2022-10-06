@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.modal-container {
+    background-color: blueviolet;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image {
+    max-width: 70vw;
+    max-height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.text-container {
+    max-width: 70vw;
+    background-color: red;
+    padding: .5rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .image {
+        max-width: 80vw;
+    }
+    .text-container {
+        max-width: 80vw;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .image {
+        max-width: 90vw;
+    }
+    .text-container {
+        max-width: 90vw;
+    }
+}
+
+
+.title {
+    line-height: 3.75rem;
+    font-size: 3.5rem;
+    padding: 0.5rem;
+}
+
+.date {
+    background-color: yellow;
+    margin: 0 0 1rem 0;
+    line-height: 1.75rem;
+    font-size: 1.5rem;
+}
+
+.description {
+    background-color: aqua;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.button-container {
+    background-color: darkgreen;
+    padding: 0.5rem;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+    /* align-items: ; */
+}
+
+.btn {
+    font-size: large;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: blue;
+}
+
+.btn-primary {
+    background-color: #00B7A8;
+}
+
+.btn-secondary {
+    background-color: #096386;
+}
+
+@media only screen and (min-width: 824px) {
+    .modal-container {
+        flex-direction: row;
+        max-width: 90vw;
+    }
+
+    .image {
+        max-width: 40vw;
+        max-height: auto;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .text-container {
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+
