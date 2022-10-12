@@ -3,6 +3,7 @@
 # need to figureout a way to get f_prime(x) from f(x)
 
 import sympy
+import tabulate
 
 sympy.init_printing(use_unicode=True, use_latex=True)
 
@@ -31,4 +32,9 @@ def newton_raphson_method(x0, tol, f, f_prime, output_list):
 if __name__ == "__main__":
     tol = 1e-3
     x0 = 0
-    
+    print("f(x) = ", f)
+    print("f'(x) = ", f_prime)
+    output = [('Iter', 'X_n', 'F(X_n)', 'X_n+1', 'F(X_n+1)')]
+    root, n = newton_raphson_method(x0, tol, f, f_prime, output)
+    print(tabulate.tabulate(output, headers='firstrow', tablefmt='fancy_grid'))
+    print("The approximate root is", root, "and the number of iterations is", n)

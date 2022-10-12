@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Practical 07</title>
+  </head>
+  <body>
+    <form action="/">
+      <div class="text-input-group">
+        <label for="text-input">Name</label>
+        <input id="text-input" type="text" />
+        <label for="email-input">Email</label>
+        <input id="email-input" type="email" />
+        <label for="password-input">Password</label>
+        <input id="password-input" type="password" />
+      </div>
+      <div class="radio-input-group">
+        <h3>Zender</h3>
+        <div class="radio-group">
+            <input type="radio" name="gender" id="radio-input-1" />
+            <label for="radio-input-1">Mail</label>
+            <input type="radio" name="gender" id="radio-input-2" />
+            <label for="radio-input-1">Femail</label>
+            <input type="radio" name="gender" id="radio-input-3" />
+            <label for="radio-input-1">Other</label>
+        </div>
+      </div>
+
+      <div class="check-box-group">
+        <input type="checkbox" name="" id="store-creds" />
+        <label for="store-creds">Save Details</label>
+      </div>
+      <div class="select-group">
+        <label for="select-input">Select</label>
+        <select name="" id="select-input">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+      <div class="range-input-group">
+        <label for="range-input">Range</label>
+        <input id="range-input" type="range" />
+      </div>
+
+      <div class="form-actions-group">
+        <input type="reset" value="Clear Form" />
+        <input type="submit" value="Submit Form" />
+      </div>
+    </form>
+  </body>
+</html>
