@@ -1,0 +1,38 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #1E293B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #D1D5DB;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 1.5rem;
+}
+
+.card-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    color: white;
+}
