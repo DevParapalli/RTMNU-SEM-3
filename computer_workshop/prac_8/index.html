@@ -4,54 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Practical 08 - Technical Documentation for Qwik JS Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="body dark">
-    <div class="navbar-container"></div>
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="logo"><img src="logo.svg" alt="" /></div>
+        <div class="navbar-item">Home</div>
+        <div class="navbar-item">Docs</div>
+        <div class="navbar-item">Examples</div>
+        <div class="navbar-item">About</div>
+      </div>
+    </div>
     <div class="content-container">
-      <div class="sidebar w-1/4"></div>
+      <div class="sidebar">
+        <div class="sidebar-item">Introduction</div>
+        <div class="sidebar-item">Goals</div>
+        <div class="sidebar-item">Prerequisites</div>
+        <div class="sidebar-item">Getting Started</div>
+      </div>
       <div class="content">
-        <h1 class="main-header"></h1>
+        <h1 class="main-header">Qwik JS Framework</h1>
         <div class="main-content-container">
-          <span class="intro"></span>
-          <span class="cta-link"></span>
+          <span class="intro">
+            Qwik is a new kind of web framework that can deliver instant loading
+            web applications at any size or complexity. Your sites and apps can
+            boot with about 1kb of JS (regardless of application complexity),
+            and achieve consistent performance at scale.
+          </span>
+          <span class="cta-link">Learn More</span>
         </div>
+        <h2 class="goals-header">Goals for Qwik</h2>
         <div class="goals-container">
-          <div class="goal goal-left"></div>
-          <div class="goal goal-center"></div>
-          <div class="goal goal-right"></div>
+          <div class="goal goal-left">
+            <div class="goal-title">General Purpose</div>
+            <div class="goal-content">
+              Qwik can be used to build any type of web site or application
+            </div>
+          </div>
+          <div class="goal goal-center">
+            <div class="goal-title">Instant-on</div>
+            <div class="goal-content">
+              Unlike other frameworks, Qwik is resumable which means Qwik
+              applications require 0 hydration. This allows Qwik apps to have
+              instant-on interactivity, regardless of size or complexity
+            </div>
+          </div>
+          <div class="goal goal-right">
+            <div class="goal-title">Optimized for speed</div>
+            <div class="goal-content">
+              Qwik has unprecedented performance, offering sub-second full page
+              loads even on mobile devices. Qwik achieves this by delivering
+              pure HTML, and incrementally loading JS only as-needed.
+            </div>
+          </div>
         </div>
-        <div class="prerequisites-container">
-          <h2 class="prerequisites-header"></h2>
-          <div class="prerequisites"></div>
-          <div class="prerequisites"></div>
-          <div class="prerequisites"></div>
-        </div>
+        <h2 class="prerequisites-header">Prerequisites</h2>
+        <ul class="prerequisites-container">
+          <li class="prerequisites"><span class="prereq-link">NodeJS v16</span> or higher</li>
+          <li class="prerequisites">IDE (<span class="prereq-link">vscode</span> recommended)</li>
+          <li class="prerequisites">Qwik Thinking...</li>
+        </ul>
+        <h2 class="getting-started-header">Getting Started</h2>
         <div class="getting-started-container">
-          <h2 class="getting-started-header"></h2>
           <div class="step-1">
-            <span class="text"></span>
-            <span class="code"></span>
+            <span class="text"
+              >The first step is to create an application. Qwik comes with a CLI
+              that allows you to create a basic working skeleton of an
+              application. We will use the CLI to create a blank starter so that
+              you can quickly familiarize yourself with it.</span
+            >
+            <span class="code">npm create qwik@latest</span>
           </div>
           <div class="step-2">
             <!-- CD to appdir -->
-            <span class="text"></span>
-            <span class="code"></span>
+            <span class="text"
+              >Change into the directory created by the
+              <span class="highlight">npm create qwik@latest</span>.</span
+            >
+            <span class="code">cd qwik-app</span>
             <!-- Install using NPM -->
-            <span class="text"></span>
-            <span class="code"></span>
+            <span class="text">Install NPM modules</span>
+            <span class="code">npm install</span>
             <!-- Invoke dev server -->
-            <span class="text"></span>
-            <span class="code"></span>
+            <span class="text">Invoke the dev server</span>
+            <span class="code">npm start</span>
             <!-- Server info -->
-            <span class="text"></span>
-            <span class="code"></span>
+            <span class="text"
+              >You should see a server running with your To-do application</span
+            >
+            <span class="code output">
+
+              VITE v3.1.1 ready in 140 ms<br />
+              <br />
+              ➜ Local: http://localhost:5174/<br />
+              ➜ Network: use --host to expose
+            </span>
             <!-- Closing CTA -->
-            <span class="text"></span>
+            <span class="text"
+              >Visit
+              <a href="http://localhost:5174/" class="server-link"
+                >http://localhost:5174/</a
+              >
+              to explore the app.</span
+            >
           </div>
           <div class="step-3">
-            <span class="cta-text"></span>
+            <div class="nav-btn-container">
+              <div class="nav-btn nav-btn-left"><span class="mono">⟵</span> Previous</div>
+              <div class="nav-btn nav-btn-right">Next <span class="mono">⟶</span></div>
+            </div>
           </div>
         </div>
       </div>

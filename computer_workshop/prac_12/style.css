@@ -1,123 +1,118 @@
+:root {
+  --border: rgb(3, 169, 244);
+  
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
+  --g3: rgb(253, 216, 53);
+}
+
 body {
+  background-color: rgb(10, 10, 10);
+  display: grid;
   height: 100vh;
-  width: 100vw;
   margin: 0px;
-  background-color: black;
+  padding: 0px;
+  place-items: center;
 }
 
-.rubik-font {
-  font-family: "Rubik", sans-serif;
-}
-
-main {
-  background-image: url("https://images.unsplash.com/photo-1666032234128-abc3e45bd1dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
-  background-position: center 0%;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  z-index: 2;
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
-}
-
-body[data-nav="true"] > main {
-  transform: translateY(-50%);
-}
-
-nav {
-  height: 50vh;
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  z-index: 1;
-  overflow: hidden;
-}
-
-#nav-links {  
-  display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
-  margin-top: clamp(2rem, 2vw, 3rem);
-  padding: 0rem clamp(1rem, 2vw, 2rem);
-  transform: translateY(70%) scale(0.9);
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
-}
-
-body[data-nav="true"] > nav > #nav-links {
-  transform: translateY(0%) scale(1);
-}
-
-#nav-links > .nav-link {
-  text-decoration: none;
-}
-
-#nav-links > .nav-link > .nav-link-label {
-  color: white;
-  font-size: 1.25rem;
-  margin: 0rem;
-  text-transform: uppercase;
-}
-
-#nav-links > .nav-link > .nav-link-image {
-  width: max(20vw, 400px);
-  aspect-ratio: 1.8 / 1;
-  border-radius: 0.5rem;
-  margin-top: 0.75rem;
-  object-fit: cover;
-}
-
-#nav-toggle {
-  height: 5rem;
-  width: 5rem;
-  position: fixed;
-  z-index: 3;
-  left: 50%;
-  bottom: 3rem;
-  transform: translateX(-50%);
-  background-color: rgb(182, 142, 113);
-  border: none;
-  border-radius: 5rem;
-  outline: none;
-  box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+.card {
+  aspect-ratio: 1 / 1.6;
+  border: 0.5vmin solid var(--border);
   cursor: pointer;
-  transition: transform, background-color;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
+  position: relative;
+  width: 56vmin;
 }
 
-#nav-toggle:hover {
-  transform: translateX(-50%) scale(1.04);
+.card:hover:before {
+  background-position: 100% 100%;
+  transform: scale(1.08, 1.03);
 }
 
-#nav-toggle:active {
-  transform: translateX(-50%) scale(0.96);
+.card:hover > .card-content {
+  background-position: -10% 0%;
 }
 
-body[data-nav="true"] > #nav-toggle {
-  background-color: rgb(85, 130, 149);
+.card:hover > .card-icon {
+  color: white; 
 }
 
-body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+.card:hover > .card-content > .card-subtitle > .card-subtitle-word {  
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateY(0%);
+  transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
 }
 
-#nav-toggle > i {
+.card:before {
+  background: linear-gradient(
+    130deg, 
+    transparent 0% 33%, 
+    var(--g1) 66%, 
+    var(--g2) 83.5%, 
+    var(--g3) 100%
+  );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  height: 100%;
+  left: 0px;
+  pointer-events: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  color: rgb(246, 231, 224);
-  font-size: 1.75rem;
-  opacity: 0;
-  transition: transform, opacity;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
+  top: 0px;
+  transition: background-position 350ms ease, transform 350ms ease;
+  width: 100%;
+  z-index: 1;
 }
 
-body[data-nav="true"] > #nav-toggle > .close {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.card-content {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 8%, 
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  height: calc(100% - 10vmin);
+  padding: 5vmin;
+  position: relative;
+  transition: background-position 350ms ease;
+  width: calc(100% - 10vmin);
+  z-index: 2;
+}
+
+.card-title,
+.card-subtitle {
+  color: white;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.card-title {
+  font-size: 6vmin;
+}
+
+.card-subtitle {
+  font-size: 3vmin;
+  margin-top: 2vmin;
+}
+
+.card-subtitle-word {
+  display: inline-block;
+  margin: 0vmin 0.3vmin;
+  opacity: 0;
+  position: relative;  
+  transform: translateY(40%);
+  transition: none;
+}
+
+.card-icon {
+  bottom: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 7vmin;
+  left: 0px;
+  margin: 5vmin;
+  position: absolute;
+  transition: color 250ms ease;
+  z-index: 2;
 }
 
 /* -- YouTube Link Styles -- */
@@ -141,7 +136,8 @@ body[data-nav="true"] > #nav-toggle > .close {
 .meta-link {
   align-items: center;
   backdrop-filter: blur(3px);
-  background-color: rgba(40, 40, 40, 0.9);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;  
@@ -156,7 +152,8 @@ body[data-nav="true"] > #nav-toggle > .close {
 }
 
 .meta-link:hover {
-  background-color: rgb(40, 40, 40);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .meta-link > i, .meta-link > span {
@@ -166,6 +163,6 @@ body[data-nav="true"] > #nav-toggle > .close {
 
 .meta-link > span {
   color: white;
-  font-family: "Rubik", sans-serif;
+  font-family: "Anek Latin", sans-serif;
   transition: color 600ms;
 }

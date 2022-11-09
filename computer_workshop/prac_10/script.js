@@ -1,19 +1,45 @@
-const subtitle = document.getElementsByClassName("card-subtitle")[0];
+const trailer = document.getElementById("trailer");
 
-const createWord = (text, index) => {
-  const word = document.createElement("span");
+const animateTrailer = (e, interacting) => {
+  const x = e.clientX - trailer.offsetWidth / 2,
+        y = e.clientY - trailer.offsetHeight / 2;
   
-  word.innerHTML = `${text} `;
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+  }
   
-  word.classList.add("card-subtitle-word");
-  
-  word.style.transitionDelay = `${index * 40}ms`;
-  
-  return word;
+  trailer.animate(keyframes, { 
+    duration: 800, 
+    fill: "forwards" 
+  });
 }
 
-const addWord = (text, index) => subtitle.appendChild(createWord(text, index));
+const getTrailerClass = type => {
+  switch(type) {
+    case "movie":
+        return "fas fa-film";
+    case "tv":
+        return "fas fa-tv";
+    case "game":
+        return "fas fa-gamepad";
+    case "video":
+      return "fa-solid fa-play";
+    default:
+      return "fa-solid fa-arrow-up-right"; 
+  }
+}
 
-const createSubtitle = text => text.split(" ").map(addWord);
-
-createSubtitle("But in a much more real sense, I have no idea what I'm doing.");
+window.onmousemove = e => {
+  const interactable = e.target.closest(".interactable"),
+        interacting = interactable !== null;
+  
+  const icon = document.getElementById("trailer-icon");
+  
+  animateTrailer(e, interacting);
+  
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+  
+  if(interacting) {
+    icon.className = getTrailerClass(interactable.dataset.type);
+  }
+}
