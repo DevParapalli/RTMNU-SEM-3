@@ -23,7 +23,7 @@ public class Student {
 
     Student(int rollNumber, String name, int ...marks) {
         
-        
+        System.out.println("Student("+rollNumber+", "+name+", ...marks)");
         this.rollNumber = rollNumber;
         this.name = name;
         this.marks = marks;
