@@ -84,11 +84,11 @@ int main(int argc, char const *argv[])
 
     if (direction == 'L')
     {
-        printf("We are moving in LEFT direction.");
+        printf("We are moving in LEFT direction.\n");
     }
     else
     {
-        printf("We are moving in RIGHT direction.");
+        printf("We are moving in RIGHT direction.\n");
     }
     
     SCAN(arr, head, direction);
