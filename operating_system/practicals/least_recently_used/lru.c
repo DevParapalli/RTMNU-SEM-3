@@ -4,7 +4,7 @@
 #define C_LANG 4
 
 int usage_queue[MEMORY_SIZE+C_LANG] = {-1};
-int useage_queue_length = 0;
+int usage_queue_length = 0;
 int usage_pointer = 0;
 
 int memory[MEMORY_SIZE+C_LANG] = {-1};
@@ -18,8 +18,8 @@ int pages_pointer = 0;
 int pages_length = 0;
 
 void usage_queue_append(int x) {
-    usage_queue[useage_queue_length] = x;
-    useage_queue_length++;
+    usage_queue[usage_queue_length] = x;
+    usage_queue_length++;
 }
 
 void memory_append(int x) {
@@ -30,11 +30,11 @@ void memory_append(int x) {
 int usage_queue_pop(int index){
     int i;
     int x = usage_queue[index];
-    for(i=index; i<useage_queue_length; i++){
+    for(i=index; i<usage_queue_length; i++){
         usage_queue[i] = usage_queue[i+1];
     }
-    usage_queue[useage_queue_length] = -1;
-    useage_queue_length--;
+    usage_queue[usage_queue_length] = -1;
+    usage_queue_length--;
     return x;
 }
 
@@ -61,7 +61,7 @@ int memory_index(int x){
 
 int usage_queue_remove(int x){
     int i;
-    for(i=0; i<useage_queue_length; i++){
+    for(i=0; i<usage_queue_length; i++){
         if(usage_queue[i] == x){
             return usage_queue_pop(i);
         }
